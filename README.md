@@ -2,160 +2,86 @@
 
 ## Project Overview
 
-This project presents an exploratory data analysis (EDA) of BrightTV’s user and viewership data to understand user behaviour, content consumption patterns, and engagement trends.
+This project presents an end-to-end exploratory data analysis (EDA) of BrightTV’s user and viewership data. The goal was to understand user behaviour, identify content consumption patterns, and uncover opportunities to improve engagement and retention.
 
-The objective is to generate actionable insights that support Customer Value Management (CVM) strategies to improve user engagement, retention, and subscription growth.
+This analysis simulates a real-world business scenario focused on Customer Value Management (CVM), where data-driven insights are used to support strategic decision-making.
 
 ## Business Objective
 
-To grow BrightTV’s subscription base by:
-- Analysing user demographics and behaviour
-- Identifying content consumption patterns
-- Understanding engagement trends
-- Recommending strategies to improve retention and increase usage
+To analyse user and viewership data in order to:
+- Identify key user segments driving engagement  
+- Understand when and how users consume content  
+- Detect low-engagement periods and inactive users  
+- Recommend strategies to improve retention and grow the subscriber base  
 
-## Key Questions
+## Methodology
 
-- What are the user and usage trends?
-- What factors influence content consumption?
-- How can low-consumption periods be improved?
-- How can BrightTV grow its user base?
+The analysis was conducted using a structured data analytics workflow:
 
-## Data Sources
+### 1. Data Preparation
+- Cleaned missing and inconsistent values  
+- Converted timestamps from UTC to South African time (UTC +2)  
+- Engineered features:
+  - Date  
+  - Hour of day  
+  - Day of week  
+  - Age groups  
 
-### 1. User Profile Data
-Contains demographic and identity information:
-- UserID
-- Name and Surname
-- Email
-- Gender
-- Race
-- Age
-- Province
-- Social Media Handle
+### 2. Data Integration
+- Joined user profile data with session-level viewership data using `UserID`  
+- Created a unified dataset for behavioural analysis  
 
-### 2. Viewership Data (Session-Level)
-Each row represents a viewing session:
-- UserID
-- Channel/Content
-- Session Duration
-- Record Date (UTC)
+### 3. Exploratory Data Analysis (EDA)
+The dataset was analysed across key dimensions:
 
-## Data Preparation
-
-The following preprocessing steps were applied:
-
-- Handling missing values using NULL standardisation
-- Converting timestamps from UTC to South African time (UTC +2)
-- Feature engineering:
-  - Date
-  - Hour of day
-  - Day of week
-  - Age groups
-- Data cleaning and validation
-
-## Data Integration
-
-The datasets were combined using `UserID` to:
-- Enrich viewership data with user demographics
-- Create a unified dataset for analysis
-- Enable deeper insights into user behaviour and engagement
-
-## Exploratory Data Analysis (EDA)
-
-### User Analysis
-- Users by Gender
-- Users by Race
-- Users by Province
-- Users by Age Group
-
-### Usage Analysis
-- Total number of sessions
-- Viewing by day of week
-- Viewing by time of day
-- Peak vs low usage periods
-
-### Content Analysis
-- Most watched content
-- Most popular channels
-- Content consumption by demographic groups
-
-### Engagement Analysis
-- Sessions per user
-- Most active users
-- Least active users
-- Repeat vs one-time viewers
-
-### Low Consumption Analysis
-- Identification of lowest viewing days
-- Analysis of low engagement time periods
-- Content performance during low-activity periods
+- **User Analysis** → Who are the users?  
+- **Usage Analysis** → When do users engage?  
+- **Content Analysis** → What content is consumed?  
+- **Engagement Analysis** → Which users are most active?  
+- **Low Consumption Analysis** → Where are the engagement gaps?  
 
 ## Key Insights
 
-- Peak viewing occurs between **14:00–20:00**
-- Highest engagement days are **Wednesday, Friday, and Saturday**
-- **Monday** is the lowest consumption day
-- Core audience: **25–34 age group in Gauteng**
-- A small number of channels dominate content consumption
-- A segment of users is inactive, indicating re-engagement opportunities
+- Peak viewing occurs between **14:00–20:00**, indicating strong afternoon and evening engagement  
+- Highest activity days are **Wednesday, Friday, and Saturday**  
+- **Monday** is the lowest consumption day, presenting a clear opportunity for intervention  
+- The most engaged audience segment is users aged **25–34**, particularly in **Gauteng**  
+- Content consumption is concentrated in a small number of channels  
+- A segment of users shows **no viewing activity**, highlighting retention and onboarding gaps  
 
-## Strategic Recommendations
+## Business Impact
 
-###  Content Strategy
-- Promote high-performing content
-- Introduce content aligned with top demographics
-- Curate content for low-consumption days
+The analysis highlights actionable opportunities for BrightTV to:
 
-###  Engagement Strategy
-- Personalised content recommendations
-- Notifications during low-activity periods
-- Introduce "peak-time content drops"
+- Improve engagement during low-consumption periods (e.g. Mondays)  
+- Optimise content strategy based on high-performing demographics  
+- Increase retention by targeting inactive users  
+- Enhance personalisation and recommendation systems  
 
-### Growth Strategy
-- Target underrepresented demographics
-- Run province-specific campaigns
-- Leverage social media marketing
+These insights support a **retention-first growth strategy**, ensuring that existing users are engaged before scaling acquisition efforts.
 
-### Retention Strategy
-- Re-engage inactive users
-- Introduce loyalty and reward programmes
-- Improve onboarding experience
+## Tools & Technologies
 
-## Expected Impact
+- **Databricks (SQL):** Data cleaning, transformation, and analysis  
+- **Microsoft Excel:** Dashboard creation using pivot tables and charts  
+- **Canva:** Visual presentation of insights  
 
-- Increased user engagement
-- Higher content consumption
-- Improved retention rates
-- Growth in subscription base
+## Deliverables
 
-##  Tools & Technologies
+- SQL-based exploratory data analysis  
+- Excel dashboard visualising user, usage, and content trends  
+- Canva presentation summarising insights and recommendations  
+- Miro diagram outlining the analytical framework  
 
-- SQL (Databricks)
-- Excel (Pivot Tables & Dashboard)
-- Canva (Presentation Design)
+## Key Skills Demonstrated
 
-## Dashboard
-
-The dashboard was built in Excel using pivot tables and charts to visualise:
-- User distribution
-- Viewing patterns
-- Content performance
-- Engagement trends
-- Low-consumption opportunities
-
-## Repository Structure
-
-
-
-## Conclusion
-
-This analysis demonstrates how combining user demographics with viewership behaviour enables data-driven decision-making.
-
-By focusing on engagement, content strategy, and retention, BrightTV can improve user experience and achieve sustainable growth.
-
+- Exploratory Data Analysis (EDA)  
+- Data cleaning and feature engineering  
+- SQL-based data transformation  
+- Data storytelling and visualisation  
+- Translating data insights into business recommendations  
 
 ## Author
 
 **Nompumelelo Simango**  
-Strategic Communications & Junior Data Analyst
+Strategic Communications Specialist & Junior Data Analyst 
